@@ -32,7 +32,7 @@ class Artist
       if artist_array == artist
         new_artist = artist
       end
-    end
+    end.uniq!
 
     if new_artist != nil
       new_artist
