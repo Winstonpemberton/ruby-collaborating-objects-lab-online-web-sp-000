@@ -20,8 +20,27 @@ class Artist
   end
 
   def add_song(song)
-  song.artist = self
-  #binding.pry
+    song.artist = self
+  end
+
+  def self.find_or_create_by_name(artist)
+    #try to find the artist in @@all 
+    #if it can't find it create a new artist 
+
+    new_artist = ""
+
+    all.select do |artist_array|
+      if artist_array == artist
+        new_artist = artist
+      end 
+    end
+
+    if new_artist != nil 
+      new_artist
+    else
+      new_artist = Artist.new(artist)
+    end
+
   end
 
 
