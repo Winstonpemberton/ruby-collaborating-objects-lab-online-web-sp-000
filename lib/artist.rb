@@ -34,7 +34,7 @@ class Artist
       end
     end
 
-    if new_artist != nil && new_artist.uniq!
+    if new_artist != nil
       new_artist
     else
       new_artist = Artist.new(artist)
