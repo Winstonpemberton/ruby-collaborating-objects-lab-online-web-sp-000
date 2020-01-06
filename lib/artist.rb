@@ -24,18 +24,18 @@ class Artist
   end
 
   def self.find_or_create_by_name(artist)
-    #try to find the artist in @@all 
-    #if it can't find it create a new artist 
+    #try to find the artist in @@all
+    #if it can't find it create a new artist
 
     new_artist = ""
 
     all.select do |artist_array|
       if artist_array == artist
         new_artist = artist
-      end 
+      end
     end
 
-    if new_artist != nil 
+    if new_artist != nil
       new_artist
     else
       new_artist = Artist.new(artist)
