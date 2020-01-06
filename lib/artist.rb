@@ -31,7 +31,7 @@ class Artist
     all.select do |artist_array|
       if artist_array == artist
         new_artist = artist
-      end.uniq!
+      end
     end
 
     if new_artist != nil
